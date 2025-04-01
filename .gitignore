@@ -28,4 +28,5 @@ Thumbs.db
 
 .ruff*
 .mypy*
-shared/*
+shared/
+examples/

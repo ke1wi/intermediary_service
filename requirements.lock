@@ -33,6 +33,9 @@ celery==5.4.0
 certifi==2025.1.31
     # via httpcore
     # via httpx
+    # via requests
+charset-normalizer==3.4.1
+    # via requests
 click==8.1.8
     # via celery
     # via click-didyoumean
@@ -47,10 +50,14 @@ click-plugins==1.1.1
     # via celery
 click-repl==0.3.0
     # via celery
+currencyapicom==0.1.1
+    # via intermediary-service
 dnspython==2.7.0
     # via email-validator
 email-validator==2.2.0
     # via fastapi
+everapi==0.1.1
+    # via currencyapicom
 exceptiongroup==1.2.2
     # via aio-pika
 fastapi==0.115.12
@@ -70,7 +77,10 @@ idna==3.10
     # via anyio
     # via email-validator
     # via httpx
+    # via requests
     # via yarl
+iniconfig==2.1.0
+    # via pytest
 jinja2==3.1.6
     # via fastapi
 kombu==5.5.2
@@ -88,8 +98,12 @@ mdurl==0.1.2
     # via markdown-it-py
 multidict==6.2.0
     # via yarl
+packaging==24.2
+    # via pytest
 pamqp==3.3.0
     # via aiormq
+pluggy==1.5.0
+    # via pytest
 prompt-toolkit==3.0.50
     # via click-repl
 propcache==0.3.1
@@ -104,6 +118,8 @@ pydantic-settings==2.8.1
     # via intermediary-service
 pygments==2.19.1
     # via rich
+pytest==8.3.5
+    # via intermediary-service
 python-dateutil==2.9.0.post0
     # via celery
 python-dotenv==1.1.0
@@ -115,6 +131,9 @@ pyyaml==6.0.2
     # via uvicorn
 redis==5.2.1
     # via intermediary-service
+requests==2.32.3
+    # via currencyapicom
+    # via everapi
 rich==14.0.0
     # via rich-toolkit
     # via typer
@@ -150,6 +169,8 @@ typing-inspection==0.4.0
 tzdata==2025.2
     # via celery
     # via kombu
+urllib3==2.3.0
+    # via requests
 uvicorn==0.34.0
     # via fastapi
     # via fastapi-cli
